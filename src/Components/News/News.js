@@ -18,12 +18,13 @@ const useStyles = makeStyles({
 });
 
 const News = (props) => {
+	console.log(props);
 	const { title, description, urlToImage } = props.article;
 	const classes = useStyles();
 	return (
 		<Card className={classes.root}>
 			<CardActionArea>
-				<CardMedia className={classes.media} image="{urlToImage}" title="Contemplative Reptile" />
+				<CardMedia className={classes.media} image={urlToImage} title="Contemplative Reptile" />
 				<CardContent>
 					<Typography gutterBottom variant="h5" component="h2">
 						{title}
